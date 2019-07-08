@@ -1,0 +1,9 @@
+{
+    "name": "prometheus-neon",
+    "version": "0.0.1",
+    "license": "GPL-3.0-or-later",
+    "main": "lib/index.js",
+    "devDependencies": {
+        "neon-cli": "0.2.0"
+    }
+}

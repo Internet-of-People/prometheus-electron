@@ -1,9 +1,11 @@
 {
-  "name": "electron-webpack-quick-start",
+  "name": "prometheus-cross-platform-application",
   "version": "0.0.1",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "dev": "electron-webpack dev",
+    "build-rust-release": "electron-build-env neon build prometheus-neon --release",
+    "build-rust-dev": "electron-build-env neon build prometheus-neon",
     "compile": "electron-webpack",
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
@@ -17,6 +19,7 @@
     "bootstrap-vue": "2.0.0-rc.25",
     "jquery": "3.4.1",
     "popper.js": "1.15.0",
+    "prometheus-neon": "file:./upstream/prometheus-neon",
     "source-map-support": "0.5.12",
     "vue": "2.6.10",
     "vue-axios": "2.1.4",
@@ -25,7 +28,9 @@
     "vuex": "3.1.1"
   },
   "devDependencies": {
-    "electron": "5.0.4",
+    "css-loader": "3.0.0",
+    "electron": "5.0.6",
+    "electron-build-env": "0.2.0",
     "electron-builder": "20.44.4",
     "electron-webpack": "2.7.2",
     "electron-webpack-vue": "2.3.0",
@@ -35,10 +40,13 @@
   },
   "electronWebpack": {
     "main": {
-      "webpackConfig": "webpack.config.js"
+      "webpackConfig": "webpack.main.config.js",
+      "extraEntries": [
+        "@/preload.js"
+      ]
     },
     "renderer": {
-      "webpackConfig": "webpack.config.js",
+      "webpackConfig": "webpack.renderer.config.js",
       "sourceDirectory": "../prometheus-ui/src"
     }
   }

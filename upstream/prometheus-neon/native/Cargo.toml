@@ -1,0 +1,20 @@
+[package]
+name = "prometheus-neon"
+version = "0.1.0"
+authors = ["wigy <wigy_opensource_developer@yahoo.com>"]
+edition = "2018"
+build = "build.rs"
+
+[lib]
+name = "prometheus_neon"
+crate-type = ["dylib"]
+
+[build-dependencies]
+neon-build = "0.2.0"
+
+[dependencies]
+failure = "*"
+log = "*"
+log4rs = "*"
+neon = "0.2.0"
+prometheusd = { path="../../../../client-sdk-rust/prometheusd", package="prometheusd" }

@@ -785,9 +785,9 @@
   integrity sha512-Uy0PN4R5vgBUXFoJrKryf5aTk3kJ8Rv3PdlHjl6UaX+Cqp1QE0yPQ68MPXGrZOfG7gZVNDIJZYyot0B9ubXUrQ==
 
 "@types/node@^10.12.18":
-  version "10.14.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.9.tgz#2e8d678039d27943ce53a1913386133227fd9066"
-  integrity sha512-NelG/dSahlXYtSoVPErrp06tYFrvzj8XLWmKA+X8x0W//4MqbUyZu++giUG/v0bjAT6/Qxa8IjodrfdACyb0Fg==
+  version "10.14.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.12.tgz#0eec3155a46e6c4db1f27c3e588a205f767d622f"
+  integrity sha512-QcAKpaO6nhHLlxWBvpc4WeLrTvPqlHOvaj0s5GriKkA1zq+bsFBPpfYCvQhLqLgYlIko8A9YrPdaMHCo5mBcpg==
 
 "@types/q@^1.5.1":
   version "1.5.2"
@@ -2070,7 +2070,7 @@ commander@2.9.x:
   dependencies:
     graceful-readlink ">= 1.0.0"
 
-commander@^2.19.0:
+commander@^2.19.0, commander@^2.9.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
   integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
@@ -2361,7 +2361,7 @@ css-hot-loader@^1.4.4:
     lodash "^4.17.5"
     normalize-url "^1.9.1"
 
-css-loader@^3.0.0:
+css-loader@3.0.0, css-loader@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-3.0.0.tgz#bdd48a4921eefedf1f0a55266585944d4e5efc63"
   integrity sha512-WR6KZuCkFbnMhRrGPlkwAA7SSCtwqPwpyXJAPhotYkYsc0mKU9n/fu5wufy4jl2WhBw9Ia8gUQMIp/1w98DuPw==
@@ -2838,6 +2838,14 @@ ejs@^2.6.2:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.2.tgz#3a32c63d1cd16d11266cd4703b14fec4e74ab4f6"
   integrity sha512-PcW2a0tyTuPHz3tWyYqtK6r1fZ3gp+3Sop8Ph+ZYN81Ob5rwmbHEzaqs10N3BEsaGTkh/ooniXK+WwszGlc2+Q==
 
+electron-build-env@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/electron-build-env/-/electron-build-env-0.2.0.tgz#5649ee3e5fd006e267086caa945b77a1fa220b92"
+  integrity sha1-VknuPl/QBuJnCGyqlFt3ofoiC5I=
+  dependencies:
+    commander "^2.9.0"
+    mkdirp "^0.5.1"
+
 electron-builder@20.44.4:
   version "20.44.4"
   resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-20.44.4.tgz#c47981ddf486d582c0ae0f4d530c831010aacad7"
@@ -2974,10 +2982,10 @@ electron-webpack@2.7.2:
     webpack-merge "^4.2.1"
     yargs "^13.2.4"
 
-electron@5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-5.0.4.tgz#2e0d09055363e983f4a73317cde4821c39617b02"
-  integrity sha512-7QaKorvANvP+azMT7wElx33oLlqw8QxmLs7/outfH7LC5amErk4EUtWDesQ6Zgr+s5pYFbykl8ZtJ4ZGXER05g==
+electron@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-5.0.6.tgz#e3ca4a58b5716fceef3fb64e1fd2222dd9c51de0"
+  integrity sha512-0L53lv26eDhaaNxL6DqXGQrQOEAYbrQg40stRSb2pzrY06kwPbABzXEiaCvEsBuKUQ+9OQBbVyyvXRbLJlun/A==
   dependencies:
     "@types/node" "^10.12.18"
     electron-download "^4.1.0"
@@ -6238,6 +6246,9 @@ progress-stream@^1.1.0:
   dependencies:
     speedometer "~0.1.2"
     through2 "~0.2.3"
+
+"prometheus-neon@file:./upstream/prometheus-neon":
+  version "0.0.1"
 
 promise-inflight@^1.0.1:
   version "1.0.1"

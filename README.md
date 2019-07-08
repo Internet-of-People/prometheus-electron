@@ -1,35 +1,32 @@
-# electron-webpack-quick-start
-> A bare minimum project structure to get started developing with [`electron-webpack`](https://github.com/electron-userland/electron-webpack).
+# Prometheus Cross-Platform Application
 
-Thanks to the power of `electron-webpack` this template comes packed with...
+This code integrates Prometheus UI and Prometheus Backend into a cross-platform application using
+[electron-webpack](https://webpack.electron.build/).
 
-* Use of [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) for development
+## Core Components Used
+
+* [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) for development
 * HMR for both `renderer` and `main` processes
-* Use of [`babel-preset-env`](https://github.com/babel/babel-preset-env) that is automatically configured based on your `electron` version
-* Use of [`electron-builder`](https://github.com/electron-userland/electron-builder) to package and build a distributable electron application
+* [`babel-preset-env`](https://github.com/babel/babel-preset-env) that is automatically configured based on your `electron` version
+* [`electron-builder`](https://github.com/electron-userland/electron-builder) to package and build a distributable electron application
 
-Make sure to check out [`electron-webpack`'s documentation](https://webpack.electron.build/) for more details.
+# Usage
 
-## Getting Started
-Simply clone down this repository, install dependencies, and get started on your application.
+## Prerequisites
 
-The use of the [yarn](https://yarnpkg.com/) package manager is **strongly** recommended, as opposed to using `npm`.
+* The [prometheus-ui](https://gitlab.libertaria.community/iop-stack/communication/prometheus-ui) repo cloned out. The renderer's source directory is set to `../prometheus-ui/src`, so it directly uses that repo's code. All the dependencies are used in that repo must be included here too, as we only reference the Vue components here, we do not use the `prometheus-ui` repo for building.
+
+## Development Scripts
 
 ```bash
-# create a directory of your choice, and copy template using curl
-mkdir new-electron-webpack-project && cd new-electron-webpack-project
-curl -fsSL https://github.com/electron-userland/electron-webpack-quick-start/archive/master.tar.gz | tar -xz --strip-components 1
-
-# or copy template using git clone
-git clone https://github.com/electron-userland/electron-webpack-quick-start.git
-cd electron-webpack-quick-start
-rm -rf .git
-
-# install dependencies
-yarn
+# install dependencies. Note: it will take a lot of time because of the neon bindings
+yarn install
 ```
 
-### Development Scripts
+```bash
+# builds the neon bindings. Note: it will take a lot of time
+yarn run build-rust
+```
 
 ```bash
 # run application in development mode
@@ -44,3 +41,9 @@ yarn dist
 # `yarn compile` & create unpacked build with electron-builder
 yarn dist:dir
 ```
+
+# TODOs
+
+* yarn install/remove removes the neon built index.node from node_modules
+* do not reference vue stuff as files from prometheus-ui, use npm-link kinda solutions
+* rebuild if rust code changes
