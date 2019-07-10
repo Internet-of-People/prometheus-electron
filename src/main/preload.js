@@ -1,2 +1,2 @@
-window.prometheus = require('prometheus-neon');
+//window.prometheus = require('prometheus-neon');
 console.log("PREALOADJS")

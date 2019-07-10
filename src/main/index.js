@@ -3,12 +3,12 @@
 import { app, BrowserWindow } from 'electron'
 import * as path from 'path'
 import { format as formatUrl } from 'url'
-//import { PrometheusDaemon } from 'prometheus-neon'
+import { PrometheusDaemon } from 'prometheus-neon'
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // global reference to mainWindow (necessary to prevent window from being garbage collected)
-let mainWindow//, prometheusDaemon
+let mainWindow, prometheusDaemon
 
 function createMainWindow() {
   const window = new BrowserWindow({
@@ -20,9 +20,6 @@ function createMainWindow() {
 
   if (isDevelopment) {
     window.webContents.openDevTools()
-  }
-
-  if (isDevelopment) {
     window.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`)
   }
   else {
@@ -35,8 +32,8 @@ function createMainWindow() {
   }
 
   window.on('closed', () => {
-    //prometheusDaemon.done()
-    //prometheusDaemon = null
+    prometheusDaemon.done()
+    prometheusDaemon = null
     mainWindow = null
   })
 
@@ -67,6 +64,14 @@ app.on('activate', () => {
 
 // create main BrowserWindow when electron is ready
 app.on('ready', () => {
-  //prometheusDaemon = new PrometheusDaemon()
+  console.log('yo1')
+  try {
+    console.log(PrometheusDaemon.toString())
+    prometheusDaemon = new PrometheusDaemon()
+  }
+  catch(err) {
+    console.log(err)
+  }
+  console.log('yo2')
   mainWindow = createMainWindow()
 })

@@ -19,7 +19,7 @@
     "bootstrap-vue": "2.0.0-rc.25",
     "jquery": "3.4.1",
     "popper.js": "1.15.0",
-    "prometheus-neon": "file:./upstream/prometheus-neon",
+    "prometheus-neon": "./upstream/prometheus-neon",
     "source-map-support": "0.5.12",
     "vue": "2.6.10",
     "vue-axios": "2.1.4",
