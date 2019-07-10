@@ -8,6 +8,6 @@ module.exports = {
     },
   },
   "externals": {
-    vue: 'Vue'
+    //vue: 'Vue'
   }
 }

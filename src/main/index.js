@@ -28,7 +28,6 @@ function createMainWindow() {
       protocol: 'file',
       slashes: true
     }))
-    
   }
 
   window.on('closed', () => {
@@ -64,14 +63,14 @@ app.on('activate', () => {
 
 // create main BrowserWindow when electron is ready
 app.on('ready', () => {
-  console.log('yo1')
   try {
-    console.log(PrometheusDaemon.toString())
+    console.log('Instatiating PrometheusDaemon...')
     prometheusDaemon = new PrometheusDaemon()
+    console.log('PrometheusDaemon is running')
   }
   catch(err) {
+    console.log('Error while instatiating PrometheusDaemon:')
     console.log(err)
   }
-  console.log('yo2')
   mainWindow = createMainWindow()
 })

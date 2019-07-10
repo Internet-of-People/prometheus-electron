@@ -5,6 +5,13 @@ use prometheusd::{init_logger, Daemon, Options, StructOpt};
 
 pub struct PrometheusDaemon(Option<Daemon>);
 
+// https://github.com/neon-bindings/neon/issues/394
+// https://users.rust-lang.org/t/neon-electron-undefined-symbol-cxa-pure-virtual/21223
+#[no_mangle]
+pub extern fn __cxa_pure_virtual() {
+    loop{};
+}
+
 impl PrometheusDaemon {
     pub fn new() -> Self {
         let options = Options::from_args();

@@ -15,6 +15,8 @@ This code integrates Prometheus UI and Prometheus Backend into a cross-platform 
 ## Prerequisites
 
 * The [prometheus-ui](https://gitlab.libertaria.community/iop-stack/communication/prometheus-ui) repo cloned out. The renderer's source directory is set to `../prometheus-ui/src`, so it directly uses that repo's code. All the dependencies are used in that repo must be included here too, as we only reference the Vue components here, we do not use the `prometheus-ui` repo for building.
+* Install *neon-cli* with the command `npm install -g neon-cli`
+* Install Python **2.7**
 
 ## Development Scripts
 
