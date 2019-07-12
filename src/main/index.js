@@ -18,8 +18,8 @@ function createMainWindow() {
       preload: path.resolve(__dirname, 'preload.js'),
       nodeIntegration: true,
     },
-    minWidth: 1024,
-    minHeight: 800,
+    minWidth: 800,
+    minHeight: 600,
     width: ( mainScreen.size.width / 3.0 ) * 2.0,
     height: ( mainScreen.size.height / 3.0 ) * 2.0,
   })
