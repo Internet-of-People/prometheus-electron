@@ -7,12 +7,14 @@
     "name": "Internet of People"
   },
   "license": "GPL-3.0-or-later",
-  "build" :{
+  "build": {
     "appId": "global.iop.prometheus-electron",
     "productName": "Prometheus",
     "copyright": "Copyright © 2019 Decentralized Society Foundation, PA",
     "linux": {
-      "target": ["AppImage"]
+      "target": [
+        "AppImage"
+      ]
     },
     "mac": {
       "category": "public.app-category.productivity",
@@ -34,6 +36,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.19",
+    "@fortawesome/free-brands-svg-icons": "5.9.0",
     "@fortawesome/free-solid-svg-icons": "5.9.0",
     "@fortawesome/vue-fontawesome": "0.1.6",
     "axios": "0.19.0",
