@@ -14,7 +14,10 @@ pub extern fn __cxa_pure_virtual() {
 
 impl PrometheusDaemon {
     pub fn new() -> Self {
-        let options = Options::from_args();
+        // Options::from does not work, because we have no control over process parameters.
+        // On Linux, it does not pass any parameters while on OSX it does.
+        let empty = std::iter::empty::<std::ffi::OsString>();
+        let options = Options::from_iter(empty);
 
         // This panic will just throw an exception in JS
         init_logger(&options).unwrap_or_else(|e| eprintln!("Could not initialize logger {}", e));
