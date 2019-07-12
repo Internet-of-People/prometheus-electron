@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, screen } from 'electron'
 import * as path from 'path'
 import { format as formatUrl } from 'url'
 import { PrometheusDaemon } from 'prometheus-neon'
@@ -11,11 +11,17 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 let mainWindow, prometheusDaemon
 
 function createMainWindow() {
+  var mainScreen = screen.getPrimaryDisplay()
+
   const window = new BrowserWindow({
     webPreferences: {
       preload: path.resolve(__dirname, 'preload.js'),
-      nodeIntegration: true
-    }
+      nodeIntegration: true,
+    },
+    minWidth: 1024,
+    minHeight: 800,
+    width: ( mainScreen.size.width / 3.0 ) * 2.0,
+    height: ( mainScreen.size.height / 3.0 ) * 2.0,
   })
 
   if (isDevelopment) {
