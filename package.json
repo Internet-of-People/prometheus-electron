@@ -62,7 +62,7 @@
     "webpack": "4.35.0"
   },
   "electronWebpack": {
-    "title": "Prometheus - v0.0.1",
+    "title": "Prometheus",
     "main": {
       "webpackConfig": "webpack.main.config.js",
       "extraEntries": [
