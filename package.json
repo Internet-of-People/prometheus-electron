@@ -19,11 +19,11 @@
     "mac": {
       "category": "public.app-category.productivity",
       "target": "dmg",
-      "icon": "icon.png"
+      "icon": "build/icon.icns"
     },
     "dmg": {
       "title": "Prometheus",
-      "icon": "icon.png"
+      "icon": "build/icon.icns"
     }
   },
   "scripts": {

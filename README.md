@@ -27,7 +27,7 @@ yarn install
 
 ```bash
 # builds the neon bindings. Note: it will take a lot of time
-yarn run build-rust
+yarn run build-rust-[production|dev]
 ```
 
 ```bash
@@ -46,6 +46,6 @@ yarn dist:dir
 
 # TODOs
 
-* yarn install/remove removes the neon built index.node from node_modules
-* do not reference vue stuff as files from prometheus-ui, use npm-link kinda solutions
-* rebuild if rust code changes
+* `yarn install/remove` removes the neon built index.node from node_modules
+* Rebuild index.node if Rust code changes
+* Ocons are generated properly under dist on Linux, but somewhy AppImage still shows an empty image. Also, I cannot install AppImage. If I say yes, please install it, it still just runs it.
