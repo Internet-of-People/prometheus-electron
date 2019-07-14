@@ -11,13 +11,16 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 let mainWindow, prometheusDaemon
 
 function createMainWindow() {
-  var mainScreen = screen.getPrimaryDisplay()
+  const mainScreen = screen.getPrimaryDisplay()
+  const iconLocation = path.join(__dirname, '/icon/Icon-512x512.png')
+  console.log(__dirname);
 
   const window = new BrowserWindow({
     webPreferences: {
       preload: path.resolve(__dirname, 'preload.js'),
       nodeIntegration: true,
     },
+    icon: iconLocation,
     minWidth: 800,
     minHeight: 600,
     width: ( mainScreen.size.width / 3.0 ) * 2.0,

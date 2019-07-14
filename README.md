@@ -37,15 +37,12 @@ yarn dev
 # compile source code and create webpack output
 yarn compile
 
-# `yarn compile` & create build with electron-builder
-yarn dist
-
-# `yarn compile` & create unpacked build with electron-builder
-yarn dist:dir
+# build with electron-builder
+yarn [dist|dist-win|dist-mac|dist-linux]
 ```
 
 # TODOs
 
 * `yarn install/remove` removes the neon built index.node from node_modules
 * Rebuild index.node if Rust code changes
-* Ocons are generated properly under dist on Linux, but somewhy AppImage still shows an empty image. Also, I cannot install AppImage. If I say yes, please install it, it still just runs it. https://github.com/electron-userland/electron-builder/issues/2577 and
+* Ocons are generated properly under dist on Linux, but somewhy AppImage still shows an empty image. Also, I cannot install AppImage. If I say yes, please install it, it still just runs it. https://github.com/electron-userland/electron-builder/issues/2577 and https://github.com/standardnotes/desktop/tree/master/app (this is a working code in another project) and https://github.com/electron-userland/electron-builder/issues/748 and https://github.com/electron-userland/electron-builder/issues/2269

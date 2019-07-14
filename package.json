@@ -14,7 +14,9 @@
     "linux": {
       "target": [
         "AppImage"
-      ]
+      ],
+      "category": "Network",
+      "icon": "build/icon/"
     },
     "mac": {
       "category": "public.app-category.productivity",
@@ -24,6 +26,10 @@
     "dmg": {
       "title": "Prometheus",
       "icon": "build/icon.icns"
+    },
+    "appImage": {
+      "synopsis": "Prometheus",
+      "category": "Network"
     }
   },
   "scripts": {
