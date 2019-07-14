@@ -48,4 +48,4 @@ yarn dist:dir
 
 * `yarn install/remove` removes the neon built index.node from node_modules
 * Rebuild index.node if Rust code changes
-* Ocons are generated properly under dist on Linux, but somewhy AppImage still shows an empty image. Also, I cannot install AppImage. If I say yes, please install it, it still just runs it.
+* Ocons are generated properly under dist on Linux, but somewhy AppImage still shows an empty image. Also, I cannot install AppImage. If I say yes, please install it, it still just runs it. https://github.com/electron-userland/electron-builder/issues/2577 and
