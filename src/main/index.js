@@ -13,7 +13,6 @@ let mainWindow, prometheusDaemon
 function createMainWindow() {
   const mainScreen = screen.getPrimaryDisplay()
   const iconLocation = path.join(__dirname, '/icon/Icon-512x512.png')
-  console.log(__dirname);
 
   const window = new BrowserWindow({
     webPreferences: {

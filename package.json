@@ -16,7 +16,10 @@
         "AppImage"
       ],
       "category": "Network",
-      "icon": "build/icon/"
+      "icon": "build/icon/",
+      "desktop": {
+        "StartupWMClass": "prometheus"
+      }
     },
     "mac": {
       "category": "public.app-category.productivity",
@@ -26,10 +29,6 @@
     "dmg": {
       "title": "Prometheus",
       "icon": "build/icon.icns"
-    },
-    "appImage": {
-      "synopsis": "Prometheus",
-      "category": "Network"
     }
   },
   "scripts": {
@@ -49,7 +48,7 @@
     "css-loader": "3.0.0",
     "electron": "5.0.6",
     "electron-build-env": "0.2.0",
-    "electron-builder": "20.44.4",
+    "electron-builder": "21.0.15",
     "electron-webpack": "2.7.2",
     "electron-webpack-vue": "2.3.0",
     "node-sass": "4.9.0",
