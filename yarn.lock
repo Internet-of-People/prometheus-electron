@@ -2783,7 +2783,7 @@ electron-build-env@0.2.0:
     commander "^2.9.0"
     mkdirp "^0.5.1"
 
-electron-builder@^21.0.15:
+electron-builder@21.0.15:
   version "21.0.15"
   resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-21.0.15.tgz#e84ac379a1c7c584d5fbeb55b2b4754df5475733"
   integrity sha512-ENvaU8+UwLAd4hIgOib1KyB1Ap119VrrEj4tBgihuKDgsNUgV7qt2YUdYA6umcUKPAE+ewWBfPLzg+q0gqWTIQ==
