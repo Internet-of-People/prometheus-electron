@@ -18,5 +18,5 @@ EOF
     exit 1
 fi;
 
-cp -xrf upstream/prometheus-neon/ node_modules/prometheus-neon
+cp -xrf upstream/prometheus-neon/ node_modules/
 yarn run build-rust-release
