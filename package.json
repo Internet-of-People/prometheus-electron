@@ -1,6 +1,6 @@
 {
   "name": "prometheus-cross-platform-application",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Cross-platform desktop application for Prometheus",
   "author": {
     "url": "https://iop.global/",
