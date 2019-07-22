@@ -1,10 +1,10 @@
 #/usr/bin/env bash
 
-if [[ ! -d ../client-sdk-rust ]]; then
+if [[ ! -d ../mercury-rust ]]; then
     cat <<EOF
 You have to get all rust code checked out in the parent dir.
 $ cd ..
-$ git clone ssh://git@gitlab.libertaria.community:2200/iop-stack/communication/client-sdk-rust.git
+$ git clone ssh://git@gitlab.libertaria.community:2200/iop-stack/communication/mercury-rust.git
 EOF
     exit 1
 fi;

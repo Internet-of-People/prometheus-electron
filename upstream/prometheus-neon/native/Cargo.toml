@@ -17,4 +17,4 @@ failure = "*"
 log = "*"
 log4rs = "*"
 neon = "0.2.0"
-prometheusd = { path="../../../../client-sdk-rust/prometheusd", package="prometheusd" }
+prometheusd = { path="../../../../mercury-rust/prometheusd", package="prometheusd" }
