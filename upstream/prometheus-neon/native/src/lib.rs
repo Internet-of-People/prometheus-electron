@@ -1,7 +1,8 @@
 #[macro_use]
 extern crate neon;
 use neon::prelude::*;
-use prometheusd::{init_logger, Daemon, Options, StructOpt};
+use structopt::StructOpt;
+use prometheusd::{init_logger, Daemon, Options};
 
 pub struct PrometheusDaemon(Option<Daemon>);
 
