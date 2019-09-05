@@ -17,5 +17,5 @@ failure = "*"
 log = "*"
 log4rs = "*"
 neon = "0.2.0"
-prometheusd = { path="../../../../mercury-rust/prometheusd", package="prometheusd" }
+prometheus = { path="../../../../mercury-rust/prometheus", package="prometheus" }
 structopt = "*"
