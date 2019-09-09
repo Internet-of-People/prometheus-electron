@@ -1,10 +1,11 @@
 {
-  "name": "prometheus-cross-platform-application",
-  "version": "0.1.0",
+  "name": "prometheus",
+  "version": "0.1.1",
   "description": "Cross-platform desktop application for Prometheus",
   "author": {
-    "url": "https://iop.global/",
-    "name": "Internet of People"
+    "url": "https://iop.global/dsf",
+    "name": "Internet of People",
+    "email": "prometheus@iop-ventures.com",
   },
   "license": "GPL-3.0-or-later",
   "build": {
