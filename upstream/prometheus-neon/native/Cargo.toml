@@ -1,7 +1,7 @@
 [package]
 name = "prometheus-neon"
 version = "0.1.0"
-authors = ["wigy <wigy_opensource_developer@yahoo.com>"]
+authors = ["wigy <wigy_opensource_developer@yahoo.com>", "Internet of People <prometheus@iop-ventures.com>"]
 edition = "2018"
 build = "build.rs"
 
@@ -17,4 +17,5 @@ failure = "*"
 log = "*"
 log4rs = "*"
 neon = "0.2.0"
-prometheusd = { path="../../../../mercury-rust/prometheusd", package="prometheusd" }
+prometheus = { path="../../../../mercury-rust/prometheus", package="prometheus" }
+structopt = "*"
