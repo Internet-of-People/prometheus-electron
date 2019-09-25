@@ -38,12 +38,16 @@
     "build-rust-dev": "electron-build-env neon build prometheus-neon",
     "compile": "electron-webpack",
     "dist": "yarn compile && electron-builder",
-    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
+    "watch-backend-changes": "watch 'yarn run build-rust-dev' ./../mercury-rust/prometheus/",
+    "start": "concurrently \"yarn dev\" \"yarn watch-backend-changes\""
   },
   "dependencies": {
+    "concurrently": "^4.1.2",
     "prometheus-neon": "./upstream/prometheus-neon",
     "source-map-support": "0.5.12",
-    "vue": "2.6.10"
+    "vue": "2.6.10",
+    "watch": "^1.0.2"
   },
   "devDependencies": {
     "css-loader": "3.0.0",
