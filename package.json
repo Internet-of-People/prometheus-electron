@@ -43,11 +43,11 @@
     "start": "concurrently \"yarn dev\" \"yarn watch-backend-changes\""
   },
   "dependencies": {
-    "concurrently": "^4.1.2",
+    "concurrently": "4.1.2",
     "prometheus-neon": "./upstream/prometheus-neon",
     "source-map-support": "0.5.12",
     "vue": "2.6.10",
-    "watch": "^1.0.2"
+    "watch": "1.0.2"
   },
   "devDependencies": {
     "css-loader": "3.0.0",
