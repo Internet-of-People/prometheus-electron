@@ -24,7 +24,8 @@ the [IoP Stack](https://iop.global/the-iop-stack/)™.
 
 ### Prerequisites
 
-* The [prometheus-ui](https://github.com/Internet-of-People/prometheus-ui) repository cloned out on the same directory level as this repository. The renderer's source directory is set to `../prometheus-ui/src`, so it directly uses that repo's code. 
+* The [prometheus-ui](https://github.com/Internet-of-People/prometheus-ui) repository cloned out on the same directory level as this repository. The renderer's source directory is set to `../prometheus-ui/src`, so it directly uses that repo's code.
+  - Run [installation setup](../prometheus-ui/README.md#L23) the prometheus-ui repo.
 * The [mercury-rust](https://github.com/Internet-of-People/mercury-rust) repository cloned out on the same directory level as this repository.
 * Latest [Rust](https://www.rust-lang.org/)
 ```sh
@@ -64,7 +65,7 @@ yarn run build-rust-[dev|release]
 
 ```bash
 # run application in development mode
-yarn dev
+yarn start
 ```
 
 ```bash
