@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "css-loader": "3.0.0",
-    "electron": "5.0.6",
+    "electron": "7.2.4",
     "electron-build-env": "0.2.0",
     "electron-builder": "21.0.15",
     "electron-webpack": "2.7.2",
